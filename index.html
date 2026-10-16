@@ -24,7 +24,7 @@ function updateResults(){
  document.getElementById('income-display').textContent=hasIncome?format(income):'Not entered';
  document.getElementById('remaining').textContent=hasIncome?format(income-total):'—';
  document.getElementById('income-percent').textContent=hasIncome?(100*total/income).toFixed(1)+'%':'—';
- document.getElementById('income-summary').textContent=hasIncome?'Your entered spending is '+(100*total/income).toFixed(1)+'% of your monthly income, leaving '+(100*(income-total)/income).toFixed(1)+'% ('+format(income-total)+') after the expenses entered. This amount is not necessarily savings, as other bills may still apply.':'Income is optional. Enter it above to see how much remains after your listed expenses.';
+ document.getElementById('income-summary').textContent=hasIncome?'Your recorded spending represents '+(100*total/income).toFixed(1)+'% of your monthly income. Based on the expenses you entered, '+(100*(income-total)/income).toFixed(1)+'% ('+format(income-total)+') of your income remains. This is an estimated balance before any expenses you have not recorded, and should not automatically be treated as savings.':'Income is optional. Each category percentage shows its share of your total recorded spending, not its inflation rate. A category with a larger spending share does not necessarily have higher price increases. Enter your monthly income if you would also like to see how your recorded spending compares with your income.';
  const explain=document.getElementById('simple-explanation');
 
  const bars=document.getElementById('bars');
